@@ -1,0 +1,172 @@
+<?php
+include "inc/koneksi.php";
+
+?>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESA WAYAU</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="icon" href="dist/img/logo-.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white py-3">
+        <div class="container text-center">
+            <h1>Pemerintahan Desa Wayau</h1>
+            <h5>Melayani masyarakat dengan sepenuh hati</h5>
+        </div>
+    </header>
+    
+
+    <!-- Navigasi -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand ml-8" href="#">Desa Wayau</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav " >
+                    <li class="nav-item " ><a class="nav-link active" href="#">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#layanan">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#informasi">Informasi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Alamat">Alamat</a></li>
+                </div>
+            </div>
+			<!--<a href="login.php" class="btn btn-outline-light">Login</a>-->
+        </div>
+    </nav>
+
+    <!-- Gambar di Atas Konten Utama -->
+    <section>
+        <div class="container mt-5" style="text-align: center;">
+            <img src="dist/img/desa.jpg" alt="Pelayanan Desa" class="img-fluid rounded mb-4" width="1500" height="600">
+        </div>
+    </section>
+    
+    <!-- Konten Utama -->
+    <main class="py-5 mt-5">
+        <div class="container">
+            <!-- Seksi Layanan -->
+            <section id="layanan" class="mb-5">
+                <h2 class="mb-3">Layanan Desa</h2>
+                <div class="row">
+                    <!-- Layanan Pengajuan Surat -->
+                    <div class="card text-center mb-5">
+                        <div class="card-body">
+                            <h5 class="card-title">Permohonan surat</h5>
+                            <p class="card-text">Ajukan surat seperti Kematian, domisili, dan surat lainnya.</p>
+                         </div>
+                    </div>
+                    <!-- Layanan Pengaduan -->
+                    <div class="card text-center mb-5">
+                        <div class="card-body">
+                            <h5 class="card-title">Informasi Desa</h5>
+                            <p class="card-text">Dapatkan informasi terbaru dari desa.</p>
+                         </div>
+                    </div>
+                    <!-- Layanan Informasi -->
+                     <div class="card text-center mb-5">
+                        <div class="card-body">
+                            <h5 class="card-title">Pengaduan</h5>
+                            <p class="card-text">Laporkan masalah atau keluhan.</p>
+                         </div>
+                    </div>
+            </section>
+
+            <!-- Seksi Informasi -->
+            <section id="informasi" class="mb-5 mt-5">
+                <h2 class="mb-8">Informasi Terbaru</h2>
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">Jadwal Pemilihan Kepala Desa</a>
+                    <a href="#" class="list-group-item list-group-item-action">Pengumuman Layanan Kesehatan Gratis</a>
+                    <a href="#" class="list-group-item list-group-item-action">Jadwal Pemilihan Ketua RT Desa Wayau</a>
+                </div>
+            </section>
+
+            <!-- Seksi Kontak -->
+            <section id="kontak">
+                <h2 class="mb-1">Kontak  </h2>
+                <h2 class="mb-3">Pemerintahan desa Wayau </h2>
+                <form>
+                    <div class="mb-1">
+                    <img src="dist/img/email.png" alt="email" class="img-fluid rounded mb-4" width="30" height="30">
+                        <label for="nama" class="form-label">kantor_desawayau@gmail.com </label>
+                    </div>
+                    <div class="mb-1">
+                    <img src="dist/img/telephone.png" alt="telephone" class="img-fluid rounded mb-4" width="30" height="30">
+                        <label for="email" class="form-label">081256933171</label>
+                    </div>
+                    <div class="mb-1">
+                    <img src="dist/img/facebook.png" alt="facebook" class="img-fluid rounded mb-4" width="30" height="30">
+                        <label for="pesan" class="form-label">PemDes Wayau</label>
+                    </div>
+                    <div class="mb-1">
+                    <img src="dist/img/instagram.png" alt="instagram" class="img-fluid rounded mb-4" width="30" height="30">
+                        <label for="pesan" class="form-label">pemdeswayau</label>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Seksi Alamat -->
+            <section id="Alamat" class="mb-5 mt-5">
+                <h2 class="mb-2 ">Alamat </h2>
+                <div class="list-group">
+                </div>
+                <?php
+                $alamat = "Jl. Pangeran Antasari No. 1, Tanjung, Kabupaten Tabalong, Kalimantan Selatan";
+                $google_maps_link = "https://maps.app.goo.gl/W27wbevxUwFMwZcn7" . urlencode($alamat);
+            ?>
+
+            <?php
+                $alamat = "https://www.google.com/maps/place/KantorKepalaDesaWayau(Kantor Desa Wayau)";
+                $googleMapsLink = "https://maps.app.goo.gl/HeMicBUVeRKKzDjg8";
+            ?>
+            <div class="address-bar">
+                <div class="icon">
+                     <img src="dist/img/location.png" alt="marker" width="70">
+                </div>
+                <div class="text">
+                     <strong> Kantor Desa Wayau</strong><br>
+                        <a href="<?php echo $googleMapsLink; ?>" target="_blank">
+                     <?php echo $alamat; ?>
+                    </a>
+                    <p class="card-text">Jl. Jend Basuki Rahmat Rt.06 Desa Wayau, Kec. Tanjung., Kab. Tabalong, Kalimantan Selatan.</p>
+                 </div>
+                </div>
+               </div>
+             </div>
+            </section>
+        </div>
+    </main>
+        <footer class="bg-secondary text-white py-4 mt-5">
+        <div class="container text-center">
+            <a class="navbar-brand" href="">
+            <h5 class="card-title">Untuk Mengajuakan Permohon Agar Mempersiapkan Dokumen Persayratan Seperti:</h5>
+            <h5 class="card-title">KTP, KK, dan surat lainnya.</h5>
+</body>
+
+    </footer>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <a class="navbar-brand" href="">
+       		<img src="dist/img/logo.png" alt="Logo" class="img-fluid" width="42px">
+      			<div class="navlogo ml-5" >
+         		     <div class="atas">Pemerintah Kabupaten</div>
+         			 <div class="bawah">Tabalong</div>
+        		</div>
+     		 </a>
+        </div>
+        <div class="container text-center">
+            <p>&copy; 2025 Aplikasi Pelayanan Desa. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
