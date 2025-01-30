@@ -118,15 +118,15 @@ include "inc/koneksi.php";
                 <h2 class="mb-2 ">Alamat </h2>
                 <div class="list-group">
                 </div>
-                <?php
-                $alamat = "Jl. Pangeran Antasari No. 1, Tanjung, Kabupaten Tabalong, Kalimantan Selatan";
-                $google_maps_link = "https://maps.app.goo.gl/W27wbevxUwFMwZcn7" . urlencode($alamat);
-            ?>
-
-            <?php
-                $alamat = "https://www.google.com/maps/place/KantorKepalaDesaWayau(Kantor Desa Wayau)";
-                $googleMapsLink = "https://maps.app.goo.gl/HeMicBUVeRKKzDjg8";
-            ?>
+               <body>
+    <h2>Alamat</h2>
+    <p>Jl. Pangeran Antasari No. 1, Tanjung, Kabupaten Tabalong, Kalimantan Selatan</p>
+    <a href="https://maps.app.goo.gl/W27wbevxUwFMwZcn7" target="_blank">Lihat di Google Maps</a>
+    
+    <h2>Alamat Alternatif</h2>
+    <p><a href="https://www.google.com/maps/place/KantorKepalaDesaWayau(Kantor+Desa+Wayau)" target="_blank">Kantor Kepala Desa Wayau</a></p>
+    <a href="https://maps.app.goo.gl/HeMicBUVeRKKzDjg8" target="_blank">Lihat di Google Maps</a>
+</body>
             <div class="address-bar">
                 <div class="icon">
                      <img src="dist/img/location.png" alt="marker" width="70">
